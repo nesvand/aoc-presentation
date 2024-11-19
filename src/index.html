@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/night.min.css" />
+  <style>
+    :root {
+      --r-heading-color: #7e6ee8;
+      --r-link-color: #42affa;
+      --r-selection-background-color: #264c66;
+    }
+
+    .reveal {
+      font-size: 32px;
+    }
+
+    .reveal h1 {
+      font-size: 2.2em;
+      color: var(--r-heading-color);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .reveal h2 {
+      font-size: 1.6em;
+      color: #42affa;
+    }
+
+    .reveal h3 {
+      font-size: 1.3em;
+      color: #8dcffc;
+    }
+
+    .reveal ul {
+      list-style-type: none;
+    }
+
+    .reveal ul li::before {
+      content: "•";
+      color: #42affa;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    .reveal ul ul li::before {
+      content: "◦";
+      color: #8dcffc;
+    }
+
+    .slides section {
+      text-align: left;
+    }
+
+    .header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 0.5em;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Title Slide -->
+      <section>
+        <h1>Preparing for Advent of Code</h1>
+        <h2>A Developer's Guide</h2>
+      </section>
+
+      <!-- I. What is Advent of Code? -->
+      <section>
+        <h1>I. What is Advent of Code?</h1>
+        <ul>
+          <li>Annual programming challenge running December 1-25</li>
+          <li>Created by Eric Wastl in 2015</li>
+          <li>One two-part programming puzzle released each day</li>
+          <li>Both casual and competitive aspects</li>
+          <li>Global leaderboard for fastest solutions</li>
+        </ul>
+      </section>
+
+      <!-- II. Why Participate? -->
+      <section>
+        <section>
+          <h1>II. Why Participate?</h1>
+          <h2>A. Professional Development</h2>
+          <ul>
+            <li>Algorithm practice</li>
+            <li>Problem-solving skills</li>
+            <li>Time management</li>
+            <li>Code optimization</li>
+            <li>Learning new programming concepts</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>II. Why Participate?</h1>
+          <h2>B. Community Benefits</h2>
+          <ul>
+            <li>Global developer community</li>
+            <li>Private leaderboards with friends/colleagues</li>
+            <li>Reddit discussions and solutions</li>
+            <li>Learning from others' approaches</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- III. Technical Preparation -->
+      <section>
+        <section>
+          <h1>III. Technical Preparation</h1>
+          <h2>A. Choose Your Programming Language</h2>
+          <ul>
+            <li>Use a language you're comfortable with</li>
+            <li>Consider language features needed:</li>
+            <ul>
+              <li>String manipulation</li>
+              <li>Array/List operations</li>
+              <li>Hash tables/Dictionaries</li>
+              <li>Graph algorithms</li>
+              <li>Regular expressions</li>
+            </ul>
+          </ul>
+        </section>
+
+        <section>
+          <h1>III. Technical Preparation</h1>
+          <h2>B. Setup Development Environment</h2>
+          <ul>
+            <li>Create project template</li>
+            <li>Set up testing framework</li>
+            <li>Prepare input parsing helpers</li>
+            <li>Version control setup</li>
+            <li>Code snippets for common operations</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>III. Technical Preparation</h1>
+          <h2>C. Common Algorithms to Review</h2>
+          <h3>1. Graph Algorithms</h3>
+          <ul>
+            <li>Breadth-First Search</li>
+            <li>Depth-First Search</li>
+            <li>Dijkstra's Algorithm</li>
+            <li>A* Pathfinding</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>III. Technical Preparation</h1>
+          <h2>C. Common Algorithms to Review</h2>
+          <h3>2. Data Structures</h3>
+          <ul>
+            <li>Queues and Stacks</li>
+            <li>Hash Tables</li>
+            <li>Priority Queues</li>
+            <li>Sets and Maps</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>III. Technical Preparation</h1>
+          <h2>C. Common Algorithms to Review</h2>
+          <h3>3. String Operations</h3>
+          <ul>
+            <li>Regular Expressions</li>
+            <li>String parsing</li>
+            <li>Pattern matching</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>III. Technical Preparation</h1>
+          <h2>C. Common Algorithms to Review</h2>
+          <h3>4. Mathematical Concepts</h3>
+          <ul>
+            <li>Modular arithmetic</li>
+            <li>Binary operations</li>
+            <li>Basic geometry</li>
+            <li>Grid/coordinate systems</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- IV. Strategic Approach -->
+      <section>
+        <section>
+          <h1>IV. Strategic Approach</h1>
+          <h2>A. Time Management</h2>
+          <ul>
+            <li>Set realistic goals</li>
+            <li>Decide on participation level</li>
+            <li>Plan around work/life commitments</li>
+            <li>Consider time zone differences</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>IV. Strategic Approach</h1>
+          <h2>B. Problem-Solving Strategy</h2>
+          <h3>1. Read carefully</h3>
+          <ul>
+            <li>Both parts of problem</li>
+            <li>Example inputs/outputs</li>
+            <li>Edge cases</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>IV. Strategic Approach</h1>
+          <h2>B. Problem-Solving Strategy</h2>
+          <h3>2. Start Simple</h3>
+          <ul>
+            <li>Solve example first</li>
+            <li>Use brute force approach</li>
+            <li>Optimize later if needed</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>IV. Strategic Approach</h1>
+          <h2>B. Problem-Solving Strategy</h2>
+          <h3>3. Debug Effectively</h3>
+          <ul>
+            <li>Print intermediate results</li>
+            <li>Test with example input</li>
+            <li>Check Reddit for hints if stuck</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- V. Resources to Prepare -->
+      <section>
+        <section>
+          <h1>V. Resources to Prepare</h1>
+          <h2>A. Practice Problems</h2>
+          <ul>
+            <li>Previous years' puzzles</li>
+            <li>Similar coding challenges</li>
+            <li>Algorithm practice websites</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>V. Resources to Prepare</h1>
+          <h2>B. Useful Tools</h2>
+          <ul>
+            <li>Git repository</li>
+            <li>Input downloaders</li>
+            <li>Testing frameworks</li>
+            <li>Visualization tools</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>V. Resources to Prepare</h1>
+          <h2>C. Community Resources</h2>
+          <ul>
+            <li>Reddit r/adventofcode</li>
+            <li>Discord channels</li>
+            <li>GitHub solution repositories</li>
+            <li>Programming language communities</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- VI. Tips for Success -->
+      <section>
+        <section>
+          <h1>VI. Tips for Success</h1>
+          <h2>A. Before December</h2>
+          <ul>
+            <li>Set up development environment</li>
+            <li>Practice with past problems</li>
+            <li>Join communities</li>
+            <li>Create private leaderboard</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>VI. Tips for Success</h1>
+          <h2>B. During Event</h2>
+          <ul>
+            <li>Read problems carefully</li>
+            <li>Start with simple solutions</li>
+            <li>Take breaks when stuck</li>
+            <li>Learn from others</li>
+            <li>Focus on completion over speed</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>VI. Tips for Success</h1>
+          <h2>C. Common Pitfalls to Avoid</h2>
+          <ul>
+            <li>Over-engineering early solutions</li>
+            <li>Rushing to leaderboard</li>
+            <li>Neglecting to test edge cases</li>
+            <li>Missing problem constraints</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- VII. Post-Event Learning -->
+      <section>
+        <h1>VII. Post-Event Learning</h1>
+        <ul>
+          <li>Review others' solutions</li>
+          <li>Analyze different approaches</li>
+          <li>Document learned concepts</li>
+          <li>Prepare notes for next year</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: "convex",
+      backgroundTransition: "fade",
+      controls: true,
+      progress: true,
+      center: false,
+      slideNumber: true,
+      overview: true,
+      touch: true,
+      autoPlayMedia: true,
+      fragments: true,
+    });
+  </script>
+</body>
+
+</html>
