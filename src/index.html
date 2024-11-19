@@ -9,6 +9,8 @@
       --r-heading-color: #7e6ee8;
       --r-link-color: #42affa;
       --r-selection-background-color: #264c66;
+      --gradient-color-1: #7e6ee8;
+      --gradient-color-2: #42affa;
     }
 
     .reveal {
@@ -16,9 +18,34 @@
     }
 
     .reveal h1 {
+      margin-top: 20px;
       font-size: 2.2em;
-      color: var(--r-heading-color);
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(45deg,
+          var(--gradient-color-1),
+          var(--gradient-color-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: gradient 8s ease infinite;
+      background-size: 200% 200%;
+      filter: brightness(1.2) contrast(1.1);
+      text-shadow:
+        0 0 1px rgba(126, 110, 232, 0.5),
+        0 0 15px rgba(66, 175, 250, 0.5);
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     .reveal h2 {
@@ -49,8 +76,19 @@
       color: #8dcffc;
     }
 
-    .slides section {
+    .slides>section {
       text-align: left;
+      padding: 40px;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(66, 175, 250, 0.15);
+    }
+
+    .slides>section>section {
+      background: none;
+      border: none;
+      box-shadow: none;
     }
 
     .header {
@@ -59,6 +97,78 @@
       left: 20px;
       font-size: 0.5em;
       opacity: 0.6;
+    }
+
+    .reveal a {
+      position: relative;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .reveal a:hover {
+      text-shadow: 0 0 8px var(--r-link-color);
+    }
+
+    .reveal ul li {
+      transition: transform 0.2s ease;
+    }
+
+    .reveal ul li:hover {
+      transform: translateX(10px);
+    }
+
+    .reveal pre {
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 4px solid var(--gradient-color-1);
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .reveal em {
+      color: var(--gradient-color-1);
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    body {
+      background: linear-gradient(-45deg,
+          rgba(20, 20, 35, 0.95),
+          rgba(40, 30, 60, 0.95),
+          rgba(25, 40, 55, 0.95),
+          rgba(45, 35, 65, 0.95));
+      background-size: 300% 300%;
+      animation: gradientBG 20s ease infinite;
+      position: relative;
+    }
+
+    /* Add this new overlay for a subtle pattern effect */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        repeating-linear-gradient(120deg,
+          rgba(126, 110, 232, 0.05) 0px,
+          transparent 2px,
+          transparent 4px);
+      pointer-events: none;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
   </style>
 </head>
@@ -101,7 +211,7 @@
       <section>
         <section>
           <h1>III. Technical Preparation</h1>
-          <h2>A. Choose Your Programming Language</h2>
+          <h2>A. Choose Your Language</h2>
           <ul>
             <li>Use a language you're comfortable with</li>
             <li>Consider language features needed:</li>
@@ -319,8 +429,8 @@
   <script>
     Reveal.initialize({
       hash: true,
-      transition: "convex",
-      backgroundTransition: "fade",
+      transition: 'convex',
+      backgroundTransition: 'fade',
       controls: true,
       progress: true,
       center: false,
@@ -329,6 +439,11 @@
       touch: true,
       autoPlayMedia: true,
       fragments: true,
+      transitionSpeed: 'slow',
+      viewDistance: 3,
+      parallaxBackgroundImage: '',
+      parallaxBackgroundSize: '',
+      backgroundPattern: true
     });
   </script>
 </body>
