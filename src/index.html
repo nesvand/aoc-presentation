@@ -32,6 +32,7 @@
       text-shadow:
         0 0 1px rgba(126, 110, 232, 0.5),
         0 0 15px rgba(66, 175, 250, 0.5);
+      margin-bottom: 40px;
     }
 
     @keyframes gradient {
@@ -60,6 +61,8 @@
 
     .reveal ul {
       list-style-type: none;
+      margin: 20px 0;
+      margin-left: 40px;
     }
 
     .reveal ul li::before {
@@ -83,12 +86,21 @@
       background: rgba(0, 0, 0, 0.7);
       backdrop-filter: blur(8px);
       border: 1px solid rgba(66, 175, 250, 0.15);
+      height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .slides>section>section {
       background: none;
       border: none;
       box-shadow: none;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .header {
