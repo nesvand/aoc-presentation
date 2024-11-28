@@ -11,6 +11,7 @@
       --r-selection-background-color: #264c66;
       --gradient-color-1: #ae21ff;
       --gradient-color-2: #0071bd;
+      --gradient-color-3: #dde7ee;
       --accent-glow: 0 0 20px rgba(157, 140, 255, 0.4);
     }
 
@@ -23,15 +24,16 @@
       font-size: 2em;
       background: linear-gradient(45deg,
           var(--gradient-color-1),
+          var(--gradient-color-2),
           var(--gradient-color-2));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      animation: gradient 8s ease infinite;
-      background-size: 200% 200%;
+      animation: gradient 6s ease infinite;
+      background-size: 400% 400%;
       text-shadow:
-        0 0 2px rgba(157, 140, 255, 0.8),
-        0 0 25px rgba(69, 182, 255, 0.6);
+        0 0 2px rgba(157, 140, 255, 0.4),
+        0 0 25px rgba(69, 182, 255, 0.2);
       letter-spacing: 0.02em;
       margin-bottom: 40px;
     }
@@ -41,8 +43,16 @@
         background-position: 0% 50%;
       }
 
+      25% {
+        background-position: 50% 50%;
+      }
+
       50% {
         background-position: 100% 50%;
+      }
+
+      75% {
+        background-position: 50% 50%;
       }
 
       100% {
